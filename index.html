@@ -5,30 +5,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lista de Tarefas</title>
-  <link rel="icon" href="/faviconio-logo (1)/logo.svg" type="image/x-icon">
+  <link rel="icon" href="./image/android-chrome-192x192 (1).svg" type="image/x-icon">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <header>
-    <img src="./faviconio-logo (1)/logo.png" alt="Símbolo Lista de tarefas" id="lista-imagem">
-    <h1>Lista de Afazeres</h1>
+    <h1><img src="./image/logo.png" alt=""></h1>
   </header>
   <main>
-    <div>
-      <label for="event">Evento</label>
+    <div class="event">
       <input type="text" placeholder="Atividade a ser incluída" id="event" maxlength="50">
-      <button></button>
+      <button id="add">Adicionar</button>
     </div>
-    <fieldset>
-      <legend>
-        <input type="checkbox">
-      </legend>
-    </fieldset>
-
-    <button>Excluir atividade</button>
+    <div>
+      <ul id="tasks-included">
+        <h4>Lista de atividades:</h4>
+      </ul>
+    </div>
+    <div class="container">
+      <button id="exclude-all">Excluir todas atividade</button>
+      <button id="exclude-all-selected">Excluir atividade seleciondas</button>
+    </div>
   </main>
   <footer>
 
   </footer>
+  <script src="./script.js"></script>
 </body>
 </html>
