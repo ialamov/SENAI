@@ -121,42 +121,41 @@ function archiveSet() {
 
     for (const item of retrieveList){
       
-          const liConstitution = document.createElement('li');
-          liConstitution.classList = 'li-options';
-          taskList.appendChild(liConstitution);
-          
-          const divCreation = document.createElement('div');
-          divCreation.classList = 'li-div-information';
-          liConstitution.appendChild(divCreation);
-          
-          const inputCreation = document.createElement('input'); 
-          inputCreation.type = 'checkbox';
-          inputCreation.checked = item.checkBox;
-          inputCreation.classList = 'input-information';
-          divCreation.appendChild(inputCreation);
-          
-          const spanCreation = document.createElement('span');
-          spanCreation.classList = 'li-span';
-          spanCreation.innerHTML = item.text;
-          divCreation.appendChild(spanCreation);
+      const liConstitution = document.createElement('li');
+      liConstitution.classList = 'li-options';
+      taskList.appendChild(liConstitution);
+      
+      const divCreation = document.createElement('div');
+      divCreation.classList = 'li-div-information';
+      liConstitution.appendChild(divCreation);
+      
+      const inputCreation = document.createElement('input'); 
+      inputCreation.type = 'checkbox';
+      inputCreation.checked = item.checkBox;
+      inputCreation.classList = 'input-information';
+      divCreation.appendChild(inputCreation);
+      
+      const spanCreation = document.createElement('span');
+      spanCreation.classList = 'li-span';
+      spanCreation.innerHTML = item.text;
+      divCreation.appendChild(spanCreation);
 
-          if (inputCreation.checked) {
-            inputCreation.nextElementSibling.classList.add('selected');
-          }
-          
-          const divCreationSecond = document.createElement('div');
-          divCreationSecond.classList = 'li-div-button';
-          liConstitution.appendChild(divCreationSecond);
-          
-          
-          const buttonExclude = document.createElement('button');
-          buttonExclude.innerHTML = 'X';
-          buttonExclude.classList = 'exclude-button';
-          buttonExclude.addEventListener('click', function(e) {
-            if(confirm('Tem certeza que deseja excluir a atividade selecionada?'))
-            liConstitution.remove();
-          })
-          divCreationSecond.appendChild(buttonExclude);
+      if (inputCreation.checked) {
+        inputCreation.nextElementSibling.classList.add('selected');
+      }
+      
+      const divCreationSecond = document.createElement('div');
+      divCreationSecond.classList = 'li-div-button';
+      liConstitution.appendChild(divCreationSecond);
+      
+      const buttonExclude = document.createElement('button');
+      buttonExclude.innerHTML = 'X';
+      buttonExclude.classList = 'exclude-button';
+      buttonExclude.addEventListener('click', function(e) {
+        if(confirm('Tem certeza que deseja excluir a atividade selecionada?'))
+        liConstitution.remove();
+      })
+      divCreationSecond.appendChild(buttonExclude);
     }
   }
   load();
